@@ -64,11 +64,16 @@ h1, h2, h3, h4, h5, h6 {
 /*makes a div go the entire length of the screen, as a default*/
 html, body, .container{
   height: 100%;
+  width: 100%;
+}
+
+.bold{
+  font-weight: bolder;
 }
 
 .container{
   display: grid;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-columns: 1fr 4fr 1fr;
 }
 
@@ -78,21 +83,25 @@ html, body, .container{
   grid-row: 1 / 3;
   grid-column: 1 / 2;
   background-color: rgba(61,144,210,255);
-
-  grid-template-rows: 0.50fr 1.00fr 2fr;
+  grid-template-rows: 0.1fr 0.3fr 0.6fr;
+  gap: 5px;
 }
 
 .dashboard-middle, .dashboard-logo, .dashboard-section{
   margin-left: 20px;
 }
 
+.dashboard-logo{
+  margin-left: 14px;
+}
+
 .redirect, .dashboard-logo{
+  display: grid;
+  align-items: center;
   font-size: 25px;
   color: white;
   font-weight: bolder;
   cursor: pointer;
-  align-items: center;
-  display: grid;
 }
 
 .redirect{
@@ -102,15 +111,124 @@ html, body, .container{
 
 .dashboard-logo{
   grid-template-columns: 40px auto;
-  gap: 10px;
+  gap: 20px;
 }
 
 .redirect > img, .dashboard-logo > img{
   cursor: pointer;
 }
-
 /*DASHBOARD*/
 
+/*HEADER*/
+
+.header{
+  display: grid;
+  grid-column: 2 / 4;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/*TOP HEADER*/
+.header-top{
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+}
+
+.header-image{
+  height: 25px;
+}
+
+.header-searchbar, .header-profile-top{
+  display: flex;
+  align-items: center;
+  gap: calc(15%);
+}
+
+.header-searchbar{
+  gap: 10px;
+}
+
+.header-searchbar > input{
+  background-color: rgb(232,236,244);
+  border: none;
+  border-radius: 20px;
+  width: calc(75%);
+  padding: 8px;
+}
+
+.header-searchbar > img, .header-profile-top > img{
+  cursor: pointer;
+}
+
+.header-profile-top{
+  justify-content: center;
+}
+
+.profile-image-header{
+  height: 50px;
+}
+/*TOP HEADER*/
+
+/*BOTTOM HEADER*/
+.header-bottom{
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  align-items: center;
+}
+
+.header-button{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-button > button{
+  background-color: #4094d4;
+  color: white;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*BOTTOM HEADER*/
+
+.header-image-bottom{
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.header-profile-bottom{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header-profile-bottom-greeting{
+  margin-left: 20px;
+}
+
+.header-profile-bottom-greeting-hi{
+  margin-bottom: 3px;
+}
+
+.header-profile-bottom-greeting-tag{
+  font-size: 30px;
+}
+
+/*BOTTOM HEADER*/
+
+/*HEADER*/
+
+/*MAIN CONTENT*/
 .main-content{
+  display: grid;
+  grid-row: 2 / 4;
+  grid-column: 2 / 4;
   background-color: #e8ecf4;
 }
